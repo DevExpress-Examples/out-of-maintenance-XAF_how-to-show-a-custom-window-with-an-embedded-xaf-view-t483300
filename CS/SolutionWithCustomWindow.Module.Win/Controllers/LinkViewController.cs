@@ -8,12 +8,12 @@ using System.Windows.Forms;
 namespace SolutionWithCustomWindow.Module.Win.Controllers {
     public partial class LinkViewController : ViewController {
         public LinkViewController() {
-            SimpleAction showLVWindowAction = new SimpleAction(this, "Show ListView", DevExpress.Persistent.Base.PredefinedCategory.View);
+            SimpleAction showLVWindowAction = new SimpleAction(this, "Show Persons ListView", DevExpress.Persistent.Base.PredefinedCategory.View);
             showLVWindowAction.ImageName = "ModelEditor_Views";
             showLVWindowAction.Execute += new SimpleActionExecuteEventHandler(showLVWindowAction_Execute);
 
 
-            SimpleAction showDVWindowAction = new SimpleAction(this, "Show DetailView", DevExpress.Persistent.Base.PredefinedCategory.View);
+            SimpleAction showDVWindowAction = new SimpleAction(this, "Show Current DetailView", DevExpress.Persistent.Base.PredefinedCategory.View);
             showDVWindowAction.ImageName = "ModelEditor_Views";
             showDVWindowAction.Execute += new SimpleActionExecuteEventHandler(showDVWindowAction_Execute);
 
@@ -28,19 +28,20 @@ namespace SolutionWithCustomWindow.Module.Win.Controllers {
             layoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             form.Controls.Add(layoutControl);
 
-           // LayoutControlItem item1 = layoutControl.Root.AddItem();
-
-
 
             IObjectSpace os = Application.CreateObjectSpace();
-            Person record = os.GetObject((Person)View.CurrentObject);
+            var record = os.GetObject(View.CurrentObject);
 
             if (record == null)
             {
-                record = os.CreateObject<Person>();
+                record = os.CreateObject(View.ObjectTypeInfo.Type);
             }
-            DevExpress.ExpressApp.DetailView view = Application.CreateDetailView(os, "Person_DetailView", true, record);
-                view.ViewEditMode = DevExpress.ExpressApp.Editors.ViewEditMode.Edit;
+
+
+
+            //   DevExpress.ExpressApp.DetailView view = Application.CreateDetailView(os, "Person_DetailView", true, record);
+            DevExpress.ExpressApp.DetailView view = Application.CreateDetailView(os,  record);
+            view.ViewEditMode = DevExpress.ExpressApp.Editors.ViewEditMode.Edit;
             //view.CreateControls();
             //LayoutControlItem item2 = layoutControl.Root.AddItem();
             //item2.Text = "Persons";

@@ -92,6 +92,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BO\Employee.cs" />
+    <Compile Include="BO\EmployeeRole.cs" />
+    <Compile Include="BO\EmployeeTask.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
       <SubType>Component</SubType>
