@@ -46,10 +46,10 @@ namespace WindowsFormsNonXafAppII
             item1.Control = textBox1;
 
             DevExpress.ExpressApp.View view = winApplication.CreateListView(os, typeof(Person), false);
+
+
+
             view.CreateControls();
-
-
-
             Frame frame = winApplication.CreateFrame(TemplateContext.NestedFrame);
             frame.CreateTemplate();
             frame.SetView(view);
@@ -58,6 +58,9 @@ namespace WindowsFormsNonXafAppII
             item2.Parent = layoutControl.Root;
             item2.Text = "Persons";
             item2.Control = (Control)frame.Template;
+
+          
+           
             form.ShowDialog();
         }
     }
