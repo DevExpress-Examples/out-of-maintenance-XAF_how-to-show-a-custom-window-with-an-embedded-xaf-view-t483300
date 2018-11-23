@@ -7,6 +7,7 @@ using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Win;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
+using Gabos.Common;
 
 namespace SolutionWithCustomWindow.Win {
     static class Program {
@@ -28,9 +29,12 @@ namespace SolutionWithCustomWindow.Win {
             SolutionWithCustomWindowWindowsFormsApplication winApplication = new SolutionWithCustomWindowWindowsFormsApplication();
             // Refer to the https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112680.aspx help article for more details on how to provide a custom splash form.
             //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
-            if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
-                winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            }
+            //if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
+            //    winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            //}
+
+
+            winApplication.ConnectionString =  BrombaSet.DatabaseConnection;
 #if EASYTEST
             if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;

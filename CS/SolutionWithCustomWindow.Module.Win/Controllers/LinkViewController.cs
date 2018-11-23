@@ -1,5 +1,6 @@
 ﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
+using DevExpress.ExpressApp.Win;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.XtraLayout;
 using System;

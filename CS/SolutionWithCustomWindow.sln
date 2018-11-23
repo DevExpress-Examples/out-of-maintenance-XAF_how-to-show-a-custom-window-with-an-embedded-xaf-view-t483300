@@ -1,12 +1,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionWithCustomWindow.Module", "SolutionWithCustomWindow.Module\SolutionWithCustomWindow.Module.csproj", "{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionWithCustomWindow.Module.Win", "SolutionWithCustomWindow.Module.Win\SolutionWithCustomWindow.Module.Win.csproj", "{7964F87D-BC5D-4C4E-8B2F-71E89739AA97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionWithCustomWindow.Win", "SolutionWithCustomWindow.Win\SolutionWithCustomWindow.Win.csproj", "{D05D93DF-312D-4D4E-B980-726871EC7833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsNonXafApp", "WindowsNonXafApp\WindowsNonXafApp.csproj", "{962BA01B-A372-4AE4-BCE9-E141E563195F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsNonXafAppII", "WindowsFormsNonXafAppII\WindowsFormsNonXafAppII.csproj", "{94BAFBC7-20F2-4763-A26B-2B44177820E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +37,23 @@ Global
 		{D05D93DF-312D-4D4E-B980-726871EC7833}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{D05D93DF-312D-4D4E-B980-726871EC7833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D05D93DF-312D-4D4E-B980-726871EC7833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962BA01B-A372-4AE4-BCE9-E141E563195F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BAFBC7-20F2-4763-A26B-2B44177820E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3561E0AA-3066-4779-9898-C6DCB3C06A38}
 	EndGlobalSection
 EndGlobal
