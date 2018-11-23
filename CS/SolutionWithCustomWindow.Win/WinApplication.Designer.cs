@@ -1,4 +1,8 @@
-﻿namespace SolutionWithCustomWindow.Win {
+﻿using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Security;
+using DevExpress.ExpressApp.Security.Strategy;
+
+namespace SolutionWithCustomWindow.Win {
     partial class SolutionWithCustomWindowWindowsFormsApplication {
         /// <summary> 
         /// Required designer variable.
@@ -52,4 +56,22 @@
         private SolutionWithCustomWindow.Module.SolutionWithCustomWindowModule module3;
         private SolutionWithCustomWindow.Module.Win.SolutionWithCustomWindowWindowsFormsModule module4;
     }
+    public class AuthenticationStandardForTests : AuthenticationStandard
+    {
+        public override bool AskLogonParametersViaUI
+        {
+            get => false;
+            // get { return string.IsNullOrEmpty(Program.LogonUserName); }
+        }
+        public override object Authenticate(IObjectSpace objectSpace)
+        {
+            //if (!string.IsNullOrEmpty(Program.LogonUserName))
+            //{
+            return objectSpace.FindObject<SecuritySystemUser>(new DevExpress.Data.Filtering.BinaryOperator("UserName", "wingabos\\jkosinki"));
+            // }
+         //   return base.Authenticate(objectSpace);
+        }
+    }
+
+
 }
