@@ -43,6 +43,7 @@ Namespace SolutionWithCustomWindow.Win
             If System.Diagnostics.Debugger.IsAttached AndAlso winApplication.CheckCompatibilityType = CheckCompatibilityType.DatabaseSchema Then
                 winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways
             End If
+            winApplication.ConnectionString = DevExpress.ExpressApp.Xpo.InMemoryDataStoreProvider.ConnectionString
             Try
                 winApplication.Setup()
                 winApplication.Start()

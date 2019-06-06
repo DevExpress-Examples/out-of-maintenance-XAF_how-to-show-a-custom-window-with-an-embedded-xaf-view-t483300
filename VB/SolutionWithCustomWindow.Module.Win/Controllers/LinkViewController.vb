@@ -26,7 +26,7 @@ Namespace SolutionWithCustomWindow.Module.Win.Controllers
             item1.Text = "Company"
             item1.Control = textBox1
 
-            Dim listView As DevExpress.ExpressApp.View = Application.CreateListView(Application.CreateObjectSpace(), GetType(Person), False)
+            Dim listView As DevExpress.ExpressApp.View = Application.CreateListView(Application.CreateObjectSpace(GetType(Person)), GetType(Person), False)
             listView.CreateControls()
             Dim item2 As LayoutControlItem = layoutControl.Root.AddItem()
             item2.Text = "Persons"

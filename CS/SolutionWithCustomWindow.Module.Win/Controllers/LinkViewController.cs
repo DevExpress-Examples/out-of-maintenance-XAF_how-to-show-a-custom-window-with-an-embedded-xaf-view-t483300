@@ -24,7 +24,7 @@ namespace SolutionWithCustomWindow.Module.Win.Controllers {
             item1.Text = "Company";
             item1.Control = textBox1;
 
-            DevExpress.ExpressApp.View listView = Application.CreateListView(Application.CreateObjectSpace(), typeof(Person), false);
+            DevExpress.ExpressApp.View listView = Application.CreateListView(Application.CreateObjectSpace(typeof(Person)), typeof(Person), false);
             listView.CreateControls();
             LayoutControlItem item2 = layoutControl.Root.AddItem();
             item2.Text = "Persons";
