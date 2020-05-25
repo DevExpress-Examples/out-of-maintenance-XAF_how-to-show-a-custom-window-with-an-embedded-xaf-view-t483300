@@ -26,13 +26,15 @@ Namespace SolutionWithCustomWindow.Module.Win.Controllers
             item1.Text = "Company"
             item1.Control = textBox1
 
-            Dim listView As DevExpress.ExpressApp.View = Application.CreateListView(Application.CreateObjectSpace(GetType(Person)), GetType(Person), False)
+            Dim listView As DevExpress.ExpressApp.View = Application.CreateListView(GetType(Person), True)
             listView.CreateControls()
             Dim item2 As LayoutControlItem = layoutControl.Root.AddItem()
             item2.Text = "Persons"
             item2.Control = DirectCast(listView.Control, Control)
 
             form.ShowDialog()
+            listView.Dispose()
+            form.Dispose()
         End Sub
     End Class
 End Namespace
