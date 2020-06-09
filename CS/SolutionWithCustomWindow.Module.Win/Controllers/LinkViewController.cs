@@ -24,13 +24,15 @@ namespace SolutionWithCustomWindow.Module.Win.Controllers {
             item1.Text = "Company";
             item1.Control = textBox1;
 
-            DevExpress.ExpressApp.View listView = Application.CreateListView(Application.CreateObjectSpace(typeof(Person)), typeof(Person), false);
+            DevExpress.ExpressApp.View listView = Application.CreateListView(typeof(Person), true);
             listView.CreateControls();
             LayoutControlItem item2 = layoutControl.Root.AddItem();
             item2.Text = "Persons";
             item2.Control = (Control)listView.Control;
 
             form.ShowDialog();
+            listView.Dispose();
+            form.Dispose();
         }
     }
 }
